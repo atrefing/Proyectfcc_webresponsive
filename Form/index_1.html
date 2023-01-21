@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>free codecamp survey form</title>
+</head>
+<body>
+    <h1 id="title">freeCodeCamp Forma de prueba</h1>
+    <p id="description">gracias por sus comentarios ayudan a mejorar la plataforma</p>
+    <form action="" id="survey-form">
+        <fieldset>
+        <label for="name" id="name-label">Nombre: <input type="text" name="name" id="name" required placeholder="Ingrese su Nombre"></label>
+        <label for="email" id="email-label">Email: <input type="email" id="email" name="email" required placeholder="Ingrese su email"
+             pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"></label>
+        <label for="number" id="number-label">Su Edad(opcional): <input type="number" id="number" name="age" min="16" max="120" placeholder="Edad"></label>
+        <label for="dropdown" >
+            <select id="dropdown">
+                <option value="">Seleccione alguna opción</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+            </select>
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="radio1">Seleccione una de las dos:> <input type="radio" name="gruporadio" id="radio1" value="0"> Radio opción 1</label>
+        <label for="radio2"><input type="radio" name="gruporadio" id="radio2" value="1"> Radio opción 2</label>
+    </fieldset>
+    <fieldset>
+        <label for="">Temas abarcados en el sistema</label>
+        <label for="check1"><input type="checkbox"  id="check1" value="1">tema label</label>
+        <label for="check2"><input type="checkbox"  id="check2" value="2">tema input</label>
+        <label for="check2"><input type="checkbox"  id="check2" value="3">tema fieldset</label>
+        <label for="check2"><input type="checkbox"  id="check2" value="4">tema form</label>
+        <label for="check2"><input type="checkbox"  id="check2" value="5">tema submit</label>
+        <label for="comemt-add">Agregue comentarios pertinentes (opcional)<textarea name="comentarios" id="comemt-add" cols="30" rows="10"></textarea></label>
+    </fieldset>
+        <input id="submit" name="submit" type="submit" value="Submit" />   
+    </form>
+    
+</body>
+</html>
