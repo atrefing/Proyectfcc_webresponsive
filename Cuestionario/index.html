@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Continuando con los elementos meta, una definición de viewport 
+        le dice al navegador cómo renderizar la página. Incluyendo una 
+        mejor accesibilidad visual en móvil, y mejora SEO (optimización del motor de búsqueda). 
+    -->
+    <meta name="description" content="Cuestionario">
+    <!--Otro elemento meta importante para la accesibilidad 
+        y SEO es la definición de description. El valor del atributo content 
+        es usado por los motores de búsqueda para proporcionar una descripción
+        de tu página.
+    -->
+    <title>Cuestionario free code camp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img id="logo"  src="fcc_primary.svg"><!--src="fcc_primary.svg">-->
+        <h1>HTML/CSS Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#student-info" accesskey="i"">INFO</a></li>
+                <li><a href="index.html#html-questions"  accesskey="h">HTML</a></li>
+                <li><a href="index.html#css-questions" accesskey="c">CSS</a></li>
+                <!-- el simbolo de # nos da una ubicacion derivada de un ID 
+                    dentro de la misma pagina HTML
+
+        Finalmente, la accesibilidad de la navegación puede mejorarse 
+        proporcionando atajos de teclado.
+        El atributo accesskey acepta una lista de teclas de acceso separadas por 
+        espacios. Por ejemplo:
+        
+                    <button type="submit" accesskey="s">Submit</button>
+        
+        Dale a cada uno de los enlaces de navegación una tecla de acceso.
+        Nota: No siempre se aconseja utilizar las claves de acceso, pero pueden ser útiles
+        Bien hecho. Has completado el proyecto de práctica del cuestionario accesible.
+
+        -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--<form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">-->
+        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+            <section role="region" aria-labelledby="student-info">
+                <h2 id="student-info">Student Info</h2>
+                <div class="info">
+                  <label for="name">Su nombre:</label>
+                  <input type="text" name="name" id="student-name"/>
+                </div>
+                <div class="info">
+                  <label for="email">Su email: </label>
+                  <input typo="email" name="email" id="student-email"/>
+                </div>
+                <div class="info">
+                  <label for="date">F.D.C <span class="sr-only">Fecha de Cumpleaños</span></label>
+                  <input type="date" name="cumple" id="birth-date"/>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="html-questions">
+              <h2 id="html-questions">HTML</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" name="html-question-one">
+                        <legend>
+                            The legend element represents a caption for the content of its
+                            parent fieldset element 
+                        </legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" name="q1" id="q1-a1"> True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" name="q1" id="q1-a2"> False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>                  
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question" name="html-question-two">
+                        <legend>
+                            A label element nesting an input element is required to have a
+                            for attribute with the same value as the input's id
+                        </legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input type="radio" name="q2" id="q2-a1"> True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2">
+                                    <input type="radio" name="q2" id="q2-a2"> False
+                                </label>
+                            </li>
+                        </ul>
+              
+                    </fieldset>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="css-questions">
+                <h2 id="css-questions">CSS css-questions</h2>
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="firstSelect">Eres un Desarrollador FrontEnd?</label>
+                    </div>
+                    <div class="answer">
+                        <select name="firstSelect" id="firstSelect" required>
+                            <option value="">Select an Option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="textBox1">Tienes algunas preguntas:</label>
+                    </div>
+                    <div class="answer">
+                        <textarea name="area" id="textBox1" cols="36" rows="5" placeholder="Realiza tus preguntas aquí:">
+
+                        </textarea>
+                    </div>
+                </div>
+            
+
+            </section>
+            <!-- 
+                Para aumentar la accesibilidad de la página, el atributo role puede ser usado
+                para indicar el propósito detrás de un elemento en la página para las 
+                tecnologías de asistencia. El atributo role es una parte de la Iniciativa
+                 de Accesibilidad Web (WAI, por sus siglas en inglés), y acepta valores 
+                 predefinidos.
+                
+                Cada rol region requiere una etiqueta visible, que debe ser referenciado por el 
+                atributo aria-labelledby.
+                A los elementos section, dale los siguientes atributos aria-labelledby:
+                student-info
+                html-questions
+                css-questions
+            -->
+            <button type="submit">Send</button>
+          </form>
+    </main>
+    <footer>
+        <address>
+          <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+          San Francisco<br />
+          California<br />
+          USA
+        </address>
+      </footer>
+</body>
+</html>
